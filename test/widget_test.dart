@@ -1,15 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:obo/main.dart';
-void main(){
- testWidgets('Opens contact and sends emoji',(tester) async {
- await tester.pumpWidget(const OboApp());
- await tester.tap(find.text('Kişiler'));
- await tester.pumpAndSettle();
- await tester.tap(find.text('Zeynep'));
- await tester.pumpAndSettle();
- await tester.tap(find.byKey(const Key('emoji_0')));
- await tester.pumpAndSettle();
- expect(find.text('😀'),findsNWidgets(2));
- });
-}
+void main(){test('Expiry',(){final n=DateTime(2026);expect(life(n,n),1);expect(life(n,n.add(const Duration(minutes:30))),.5);expect(life(n,n.add(const Duration(hours:1))),0);});}
