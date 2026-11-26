@@ -1,5 +1,3 @@
-# OBO
+# Feelo
 
-Emoji-only messaging app for Android and iOS. Flutter + Supabase.
-
-Initial prototype; live messaging and phone authentication are not yet connected.
+Floating emoji field, radial replies, 60-minute expiry. Demo only; native icon switching and Supabase integration pending.
