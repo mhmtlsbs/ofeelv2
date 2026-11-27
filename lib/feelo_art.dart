@@ -51,10 +51,22 @@ class _Art extends CustomPainter {
  c.drawArc(const Rect.fromLTWH(19,13,62,68),3.1,3.2,false,Paint()..color=dark..strokeWidth=9..style=PaintingStyle.stroke);round(12,43,23,36,10,cream,purple);round(65,43,23,36,10,cream,purple);break;
  case 8:
  shape(Path()..moveTo(50,82)..cubicTo(0,49,9,15,32,19)..quadraticBezierTo(45,18,50,34)..quadraticBezierTo(65,7,83,25)..cubicTo(105,49,65,75,50,82)..close(),const Color(0xffffa49a),red);break;
+ case 9:
+ round(12,40,19,40,6,light,purple);
+ shape(Path()..moveTo(35,77)..lineTo(35,42)..quadraticBezierTo(48,32,49,17)..quadraticBezierTo(52,5,61,14)..quadraticBezierTo(67,21,61,39)..lineTo(78,39)..quadraticBezierTo(91,39,85,55)..lineTo(78,76)..quadraticBezierTo(75,83,62,82)..close(),cream,orange);break;
+ case 10:
+ c.save();c.translate(48,52);c.rotate(-.55);
+ round(-19,-8,36,42,15,cream,orange);
+ for(int j=0;j<4;j++){round(-19+j*9.0,-39+(j==0?8:0),10,43,5,cream,orange);}
+ round(-29,-6,13,29,6,gold,orange);c.restore();
+ c.save();c.translate(68,54);c.rotate(.38);round(-12,-22,27,55,12,gold,orange);c.restore();
+ for(int j=0;j<3;j++){final a=-2.2+j*.55;c.drawLine(Offset(50+math.cos(a)*37,39+math.sin(a)*37),Offset(50+math.cos(a)*47,39+math.sin(a)*47),Paint()..color=orange..strokeWidth=3..strokeCap=StrokeCap.round);}break;
+ case 14:
+ shape(Path()..moveTo(64,9)..cubicTo(10,2,0,68,38,85)..cubicTo(60,97,87,78,91,58)..cubicTo(55,75,32,35,64,9)..close(),cream,gold);break;
  case 12:
  shape(Path()..moveTo(50,87)..cubicTo(8,85,13,46,38,24)..quadraticBezierTo(36,43,48,45)..quadraticBezierTo(65,24,57,8)..cubicTo(95,39,96,83,50,87)..close(),gold,red);oval(37,53,27,31,cream,gold);break;
  default:
- if(i==11||i==15){final p=Path();for(int j=0;j<10;j++){final a=j*0.6283185-1.5707963;final r=j.isEven?39.0:18.0;final x=50+r*_cos(a),y=49+r*_sin(a);if(j==0){p.moveTo(x,y);}else{p.lineTo(x,y);}}p.close();shape(p,cream,orange);}
+ if(i==15){for(final v in [const Offset(42,45),const Offset(76,22),const Offset(76,72)]){final r=v.dx==42?30.0:12.0;shape(Path()..moveTo(v.dx,v.dy-r)..quadraticBezierTo(v.dx+3,v.dy-3,v.dx+r,v.dy)..quadraticBezierTo(v.dx+3,v.dy+3,v.dx,v.dy+r)..quadraticBezierTo(v.dx-3,v.dy+3,v.dx-r,v.dy)..quadraticBezierTo(v.dx-3,v.dy-3,v.dx,v.dy-r)..close(),cream,orange);}} else if(i==11){final p=Path();for(int j=0;j<10;j++){final a=j*0.6283185-1.5707963;final r=j.isEven?39.0:18.0;final x=50+r*_cos(a),y=49+r*_sin(a);if(j==0){p.moveTo(x,y);}else{p.lineTo(x,y);}}p.close();shape(p,cream,orange);}
  else {oval(13,13,74,74,cream,gold);oval(29,37,9,12,dark,dark);oval(62,37,9,12,dark,dark);c.drawArc(const Rect.fromLTWH(34,43,32,26),0,3.14,false,Paint()..color=dark..style=PaintingStyle.stroke..strokeWidth=4..strokeCap=StrokeCap.round);}
  }
  }
